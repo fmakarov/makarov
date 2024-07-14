@@ -37,6 +37,7 @@ a {
 
 main {
   margin: 20px 0 40px;
+  min-height: 80vh;
 }
 
 .contacts {
@@ -87,8 +88,6 @@ img {
 .c-card img {
   width: 100%;
   height: 100%;
-  /* max-width: calc(100vw - 10px); */
-  /* margin-left: 1px; */
 }
 
 .c-article__thumb {
