@@ -1,37 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <!-- МЕТА -->
-  <title>Валентин Федорович Макаров - историк, краевед, ветеран педагогического труда</title>
-  <meta name="description" content="Биография, публикации. Валентин Федорович Макаров - историк, краевед">
-  <meta name="keywords" content="Валентин Федорович Макаров">
-  <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/styles.css">
-</head>
-<body>
-<div class="header">
-  <div class="container mx-auto">
-    <div class="header__inner">
-      <div><h1>Валентин Федорович Макаров</h1> &ndash; историк и чувашского народа, краевед</div>
-      <div>Страница биографии, личных записей</div>
-      <div>info@valentin-makarov.ru</div>
-    </div>
-  </div>
-</div>
-<div class="container mx-auto">
-  <main class="page">
-    <div class="c-card">
-      <div class="c-article__thumb">
-        <img src="assets/makarov-valentin.jpg" alt="Валентин Федорович Макаров">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- МЕТА -->
+    <title>
+       Валентин Федорович Макаров - историк, краевед, ветеран педагогического
+      труда
+    </title>
+    <meta
+      name="description"
+      content="Биография, публикации. Валентин Федорович Макаров - историк, краевед"
+    />
+    <meta name="keywords" content="Валентин Федорович Макаров" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container mx-auto">
+        <div class="header__inner">
+          <div class="logo">
+            <h1>Валентин Федорович Макаров</h1>
+            &ndash; историк и чувашского народа, краевед
+          </div>
+          <div>Страница биографии, личных записей</div>
+          <div class="header__menu">
+            <div>Книги</div>
+            <div>Блог</div>
+            <div>Фото</div>
+            <div>Контакты</div>
+          </div>
+        </div>
       </div>
-      <div class="c-article__content">Валентин Федорович Макаров &ndash; историк, краевед</div>
     </div>
+    <main>
+      <div class="container mx-auto">
+        <div class="page">
+          <div class="c-card">
+            <div class="c-article__thumb">
+              <img
+                src="assets/makarov-valentin.jpg"
+                alt="Валентин Федорович Макаров"
+              />
+            </div>
+            <div class="c-article__content">
+              <div>
+                23 июля 2021 года свой 80-летний юбилей отметил историк,
+                краевед, ветеран педагогического труда, член союза чувашских
+                писателей при ЧНК в РТ, председатель Совета ветеранов
+                Алешкин-Саплыкского сельского поселения Дрожжановского района
+                Макаров Валентин Федорович.
+              </div>
+              <div>
+                С этим знаменательным событием именинника поздравили заместитель
+                главы района Алексей Ярухин и глава Алешкин-Саплыкского
+                сельского поселения Петр Артемьев. Гости с теплыми и добрыми
+                пожеланиями вручили Валентину Федоровичу памятные подарки,
+                пожелали ему здоровья, долголетия и бодрости духа. А также
+                поздравления, благополучия юбиляр принимал от родных и близких у
+                себя дома и по телефону.
+              </div>
+              <div>
+                Валентин Федорович родился в селе Алешкин-Саплык Дрожжановского
+                района Татарской АССР - 23 июля 1941 года...
+              </div>
+              <div style="font-size: 1.1rem; padding: 20px 0">
+                23 июля <span id="dob"></span> года исполнилось бы
+                <span style="font-size: large; color: brown" id="year"></span
+                >...
+                <span style="color: rgb(93, 43, 139)"
+                  >Вечная память и Царствия Небесного!</span
+                >
+              </div>
+            </div>
+          </div>
+          <div style="padding: 20px 0">
+            <h2 style="font-size: 1.5rem; padding: 30px 0 20px; font-weight: 600;">Новости</h2>
+            <div style="display: grid; grid-template-columns: 140px auto">
+              <div>14 июля 2024г.</div>
+              <div>Ведутся технические работы по добавлению на сайт материалов и информации.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</div>
+    <footer>
+      <div class="container mx-auto">
+        <div style="display: flex; flex-direction: column; gap: 20px">
+          <div>© Макаров Валентин Федорович</div>
+          <div>
+            Для получения и покупки книг можно обращаться:
+            <span style="font-style: italic; border-bottom: 1px dashed #ccc"
+              >info@makarov-valentin.ru</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function getDob() {
+      let today = new Date();
+      let dob = new Date("1941/07/23");
+      const dobBlock = document.getElementById("dob");
+      dobBlock.append(today.getFullYear());
+      const yearBlock = document.getElementById("year");
+      yearBlock.append(today.getFullYear() - dob.getFullYear());
+    }
 
-
-</body>
+    getDob();
+  </script>
 </html>
