@@ -1,32 +1,54 @@
-:root {
-  --header-bg: rgba(165,42,42);
-  --header-h: 40px;
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
 
-  --white: rgb(255,255,255);
+:root {
+  --header-bg: linear-gradient(45deg, red, blue);
+  --header-h: 60px;
+
+  --white: rgb(255, 255, 255);
 }
 
+/*@font-face {*/
+/*  font-family: "TTNorms";*/
+/*  src: url('../assets/fonts/tt-norms-pro-500-normal.v2.woff2') format("woff2");*/
+/*  font-style: normal;*/
+/*  font-weight: normal;*/
+/*}*/
+
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   position: relative;
-    min-height: 100%;
+  min-height: 100%;
+  font-family: 'PT Serif', sans-serif;;
 }
 
 .container {
   max-width: 768px;
-
 }
+
 .mx-auto {
   margin: 0 auto;
 }
 
 .header {
-  background-color: var(--header-bg);
+  background: var(--header-bg);
   color: var(--white);
+}
+
+a {
+  cursor: pointer;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.page {
+  padding-top: 20px;
 }
 
 h1 {
@@ -34,15 +56,70 @@ h1 {
   font-size: 1.2rem;
 }
 
+.c-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.c-card img {
+  max-width: calc(100vw - 10px / 2);
+}
+
+.c-article__thumb {
+  display: flex;
+  flex: 1 1 0;
+}
+
+.c-article__content {
+  flex: 1 1 fit-content;
+  margin: 10px 0;
+  padding-left: 1rem;
+  border-left: #882b1c 5px solid;
+}
+
+.c-article__content p {
+  margin: 0;
+}
+
 .header__inner {
   display: flex;
+  flex: 1;
   justify-content: space-between;
   align-items: center;
-height: var(--header-h);
+  height: var(--header-h);
+}
+
+@media (max-width: 1023px) {
+  .header__inner {
+    padding: 10px;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1440px;
+  }
+  .page {
+    font-size: 1rem;
+  }
+
+  .c-card {
+    align-items: center;
+  }
+
+  .c-card img {
+    max-width: calc(100% - 10px);
+    margin-right: 10px;
+  }
+
+  .c-article__content {
+    flex: 1 1 0;
   }
 }
