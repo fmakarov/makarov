@@ -1,0 +1,48 @@
+:root {
+  --header-bg: rgba(165,42,42);
+  --header-h: 40px;
+
+  --white: rgb(255,255,255);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font-size: 1.1rem;
+  position: relative;
+    min-height: 100%;
+}
+
+.container {
+  max-width: 768px;
+
+}
+.mx-auto {
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--header-bg);
+  color: var(--white);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+height: var(--header-h);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
