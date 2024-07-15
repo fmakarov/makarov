@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.valentin-makarov.ru$ [NC]
+RewriteRule ^(.*)$ https://valentin-makarov.ru/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ https://valentin-makarov.ru [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^.htacces+$ - [F]
+AddDefaultCharset UTF-8
