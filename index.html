@@ -66,31 +66,9 @@
                 Валентин Федорович родился в селе Алешкин-Саплык Дрожжановского
                 района Татарской АССР - 23 июля 1941 года...
               </div>
-              <div style="font-size: 1.1rem; padding: 20px 0">
-                23 июля <span id="dob"></span> года исполнилось бы
-                <span style="font-size: large; color: brown" id="year"></span
-                >...
-                <span style="color: rgb(93, 43, 139)"
-                  >Вечная память и Царствия Небесного!</span
-                >
-              </div>
             </div>
           </div>
-          <div class="main_news">
-            <h2>Новости</h2>
-            <div class="main_news__block">
-              <div>23 июля 2024г.</div>
-              <div>Сегодня исполнилось бы 83 года</div>
-            </div>
-            <div class="main_news__block">
-              <div>15 июля 2024г.</div>
-              <div>Добавлены книги</div>
-            </div>
-            <div class="main_news__block">
-              <div>14 июля 2024г.</div>
-              <div>Ведутся технические работы по добавлению на сайт материалов и информации.</div>
-            </div>
-          </div>
+          <div class="main_news"></div>
         </div>
       </div>
     </main>
@@ -108,16 +86,5 @@
       </div>
     </footer>
   </body>
-  <script>
-    function getDob() {
-      let today = new Date();
-      let dob = new Date("1941/07/23");
-      const dobBlock = document.getElementById("dob");
-      dobBlock.append(today.getFullYear());
-      const yearBlock = document.getElementById("year");
-      yearBlock.append(today.getFullYear() - dob.getFullYear());
-    }
-
-    getDob();
-  </script>
+  <script src="script.js"></script>
 </html>
